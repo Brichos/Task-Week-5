@@ -13,3 +13,8 @@ export function format_name(first, last) {
   
   return `${capitalizeLast}, ${capitalizeFirst}`;
 }
+
+//Membership Checker
+export function isAdult(age){
+    return age >=18;
+}
