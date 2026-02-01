@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { multiply, formatName, isAdult, getEvenNumbers } from './Week5.mjs';
+import { multiply, formatName, isAdult, getEvenNumbers, divide } from './Week5.mjs';
 
 //Calculator tests
 describe('multiply()', () => {
@@ -71,8 +71,15 @@ describe('getEvenNumbers()', () => {
     test('handles empty array', () => {
         assert.deepEqual(getEvenNumbers([]), []);
         });
-        
+
     test('handles negatives and zero', () => {
         assert.deepEqual(getEvenNumbers([-2, -1, 0, 1, 2]), [-2, 0, 2]);
+    });
+});
+
+//Error Handler tests
+describe('divide()', () => {
+    test('10 / 2 is equal to 5', () => {
+        assert.equal(divide(10, 2), 5);
     });
 });
