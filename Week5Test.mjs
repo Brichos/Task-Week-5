@@ -71,4 +71,8 @@ describe('getEvenNumbers()', () => {
     test('handles empty array', () => {
         assert.deepEqual(getEvenNumbers([]), []);
         });
+        
+    test('handles negatives and zero', () => {
+        assert.deepEqual(getEvenNumbers([-2, -1, 0, 1, 2]), [-2, 0, 2]);
+    });
 });
