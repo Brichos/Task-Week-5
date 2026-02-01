@@ -38,4 +38,8 @@ describe('formatName()', () => {
         assert.equal(formatName('John', 'Smith'), 'Smith, John');
     });
 
+    test('handles extra spaces', () => {
+        assert.equal(formatName('  John  ', '  Smith  '), 'Smith, John');
+    });
+    
     });
