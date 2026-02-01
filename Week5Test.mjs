@@ -12,8 +12,22 @@ describe('multiply()', () => {
     test('6 * 7 is equal to 42', () => {
         assert.equal(multiply(6, 7), 42);
     });
-})
+
 
  //Testing with zero
-
+test('2 * 0 is equal to 0', () => {
+        assert.equal(multiply(2, 0), 0);
+    });
+    
+    test('0 * 10 is equal to 0', () => {
+        assert.equal(multiply(0, 10), 0);
+    });
  //Testing with negative numbers
+ test('-3 * 4 is equal to -12', () => {
+        assert.equal(multiply(-3, 4), -12);
+    });
+    
+    test('-3 * -4 is equal to 12', () => {
+        assert.equal(multiply(-3, -4), 12);
+    });
+});
