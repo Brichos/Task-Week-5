@@ -4,7 +4,7 @@ export function multiply(a,b){
 }
 
 //String Formatter
-export function format_name(first, last) {
+export function formatName(first, last) {
   const cleanFirst = first.trim().toLowerCase();
   const cleanLast = last.trim().toLowerCase();
   
