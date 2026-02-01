@@ -36,10 +36,13 @@ test('2 * 0 is equal to 0', () => {
 describe('formatName()', () => {
     test('formats "John" "Smith" as "Smith, John"', () => {
         assert.equal(formatName('John', 'Smith'), 'Smith, John');
-    });
+        });
 
     test('handles extra spaces', () => {
         assert.equal(formatName('  John  ', '  Smith  '), 'Smith, John');
-    });
+        });
     
+    test('fixes incorrect upper and lowercases', () => {
+        assert.equal(formatName('jOhN', 'sMiTh'),  'Smith John')
+        });
     });
