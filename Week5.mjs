@@ -18,3 +18,8 @@ export function format_name(first, last) {
 export function isAdult(age){
     return age >=18;
 }
+
+//List Filter
+export function getEvenNumbers(inputList){
+    return inputList.filter(num => num % 2 === 0);
+}
