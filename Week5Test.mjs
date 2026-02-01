@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { multiply } from './Week5.mjs';
+import { multiply, formatName } from './Week5.mjs';
 
 //Calculator tests
 describe('multiply()', () => {
@@ -31,3 +31,11 @@ test('2 * 0 is equal to 0', () => {
         assert.equal(multiply(-3, -4), 12);
     });
 });
+
+//String Formatter tests
+describe('formatName()', () => {
+    test('formats "John" "Smith" as "Smith, John"', () => {
+        assert.equal(formatName('John', 'Smith'), 'Smith, John');
+    });
+
+    });
