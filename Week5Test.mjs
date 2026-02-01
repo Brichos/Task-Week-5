@@ -1,1 +1,1 @@
-let sigma = 3
+import { multiply } from './Week5.mjs';
