@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { multiply, formatName } from './Week5.mjs';
+import { multiply, formatName, isAdult } from './Week5.mjs';
 
 //Calculator tests
 describe('multiply()', () => {
@@ -43,6 +43,13 @@ describe('formatName()', () => {
         });
     
     test('fixes incorrect upper and lowercases', () => {
-        assert.equal(formatName('jOhN', 'sMiTh'),  'Smith John')
+        assert.equal(formatName('jOhN', 'sMiTh'),  'Smith, John')
+        });
+    });
+
+    //Membership Checker test
+    describe('isAdult()', () => {
+    test('18 is an adult', () => {
+        assert.equal(isAdult(18), true);
         });
     });
