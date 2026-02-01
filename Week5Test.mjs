@@ -1,6 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
-import { multiply, formatName, isAdult } from './Week5.mjs';
+import { multiply, formatName, isAdult, getEvenNumbers } from './Week5.mjs';
 
 //Calculator tests
 describe('multiply()', () => {
@@ -61,3 +61,10 @@ describe('formatName()', () => {
         assert.equal(isAdult(17), false);
         });
     });
+
+    //List Filter tests
+describe('getEvenNumbers()', () => {
+    test('filters [1,2,3,4,5,6] to [2,4,6]', () => {
+        assert.deepEqual(getEvenNumbers([1, 2, 3, 4, 5, 6]), [2, 4, 6]);
+        });
+});
