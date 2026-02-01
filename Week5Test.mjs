@@ -56,4 +56,8 @@ describe('formatName()', () => {
         test('25 is an adult', () => {
         assert.equal(isAdult(25), true);
         });
+
+        test('17 is not an adult', () => {
+        assert.equal(isAdult(17), false);
+        });
     });
