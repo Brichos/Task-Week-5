@@ -23,3 +23,11 @@ export function isAdult(age){
 export function getEvenNumbers(inputList){
     return inputList.filter(num => num % 2 === 0);
 }
+
+// Error handler
+export function divide(a, b){
+    if (b === 0){
+        throw new Error("Cannot divide by zero");
+    }
+    return a / b;
+}
