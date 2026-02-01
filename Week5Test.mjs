@@ -82,4 +82,8 @@ describe('divide()', () => {
     test('10 / 2 is equal to 5', () => {
         assert.equal(divide(10, 2), 5);
     });
+
+    test('throws error when dividing by zero', () => {
+        assert.throws(() => divide(10, 0), Error);
+    });
 });
